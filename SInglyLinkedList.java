@@ -2,10 +2,9 @@ package ds.SinglyLinkedList;
 
 public class SinglyLinkedList
 {
-    
-static private Node first;
+    static private Node first;
 
-public static boolean isEmpty()
+    public static boolean isEmpty()
 {
     return (first==null);
 }
@@ -50,6 +49,26 @@ public static void displayList()
     
 }
 
+//used to insert data at the end
+
+public static void insertLast(int data)
+
+{
+
+Node current=first;
+while(current.next!=null)
+{
+    current=current.next; // we will loop untill current.next is null
+    
+}
+
+Node newNode = new Node();
+newNode.data=data;
+current.next=newNode;
+
+}
+
+
 public static void main(String args[])
 {
 insertFirst(100);
@@ -58,6 +77,9 @@ insertFirst(50);
 insertFirst(90);
 insertFirst(40);
 displayList();
-}
+insertLast(99999);
+displayList();
 
 }
+}
+
